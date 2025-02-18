@@ -5,16 +5,16 @@ For this exercise, we will need:
 - Any version of a Linux server (for example, AlmaLinux 9.5)
 - A terminal capable of establishing an SSH connection (for example, PowerShell)
 
-- VM Preparation:
+VM Preparation:
   - Open the VM’s Settings.
   - Go to Network.
   - Under Attached to, select Bridged Adapter.
 
 ![Image](https://github.com/user-attachments/assets/59365b7b-fb16-48c7-bcad-865a05a1b0eb)
  
-- Clone the original VM in which you installed the Linux OS and name it "Ansible Host."
-- Be sure to select the option to generate new MAC addresses.
-- Repeat this process for Host01, Host02, and Host03.
+  - Clone the original VM in which you installed the Linux OS and name it "Ansible Host."
+  - Be sure to select the option to generate new MAC addresses.
+  - Repeat this process for Host01, Host02, and Host03.
 
 ![Image](https://github.com/user-attachments/assets/f4c54ee4-1927-47ae-9558-334c47e512f6)
 

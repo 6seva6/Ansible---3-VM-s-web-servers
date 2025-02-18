@@ -8,8 +8,8 @@ For this exercise, we will need:
 - VM Preparation:
 
 * Open the VM’s Settings.
- - Go to Network.
- - Under Attached to, select Bridged Adapter.
+  - Go to Network.
+  - Under Attached to, select Bridged Adapter.
 
 ![Image](https://github.com/user-attachments/assets/59365b7b-fb16-48c7-bcad-865a05a1b0eb)
  

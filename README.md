@@ -6,8 +6,7 @@ For this exercise, we will need:
 - A terminal capable of establishing an SSH connection (for example, PowerShell)
 
 - VM Preparation:
-
-* Open the VM’s Settings.
+  - Open the VM’s Settings.
   - Go to Network.
   - Under Attached to, select Bridged Adapter.
 

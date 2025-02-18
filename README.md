@@ -23,7 +23,7 @@ VM Preparation:
 
 ![Image](https://github.com/user-attachments/assets/87d11c4f-a82e-4aeb-b91e-ff5a6f3abc45)
 
-SSH connection and editing configuration some files:
+SSH connection and editing some configuration files:
 - Open four PowerShell windows and type the following command
 
 **`ssh username@ip_that_you_write`**

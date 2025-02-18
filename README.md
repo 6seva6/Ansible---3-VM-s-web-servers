@@ -1,4 +1,4 @@
-# ansible
+# Ansible - 3 VM's web servers
 For this exercise, we will need:
 
 - Oracle VM VirtualBox installed

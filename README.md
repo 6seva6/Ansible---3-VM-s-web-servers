@@ -23,6 +23,7 @@ VM Preparation:
 
 ![Image](https://github.com/user-attachments/assets/87d11c4f-a82e-4aeb-b91e-ff5a6f3abc45)
 
+SSH connection and editing configuration some files:
 - Open four PowerShell windows and type the following command
 
 **`ssh username@ip_that_you_write`**
@@ -46,6 +47,9 @@ For example:
 ![Image](https://github.com/user-attachments/assets/25f0dba6-c47f-47b4-94f8-4e11b1ac5769)
 
 - Now we need to repeat the steps for changing the hostname and adding IP addresses to the /etc/hosts file.
+ 
+Preparation for work with ansible:
+
 - We need to create a user on Host01-03. This user will allow Ansible to connect to these hosts and perform the required playbook actions.
 Cretate user:
  `sudo adduser ansible`

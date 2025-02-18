@@ -19,14 +19,16 @@ VM Preparation:
 ![Image](https://github.com/user-attachments/assets/f4c54ee4-1927-47ae-9558-334c47e512f6)
 
 - You can group all four VMs and take snapshots. If something goes wrong, it will be easy to roll back your actions.
-- To be able to connect to the VMs, we need to check their IP addresses. Open each VM window one by one, log in, and type ip a. Write down their IP addresses, and note which VM each one belongs to. 
+- To be able to connect to the VMs, we need to check their IP addresses. Open each VM window one by one, log in, and type `ip a`. Write down their IP addresses, and note which VM each one belongs to. 
 
 ![Image](https://github.com/user-attachments/assets/87d11c4f-a82e-4aeb-b91e-ff5a6f3abc45)
 
 SSH connection and editing some configuration files:
 - Open four PowerShell windows and type the following command
 
-**`ssh username@ip_that_you_write`**
+```bash
+ssh username@ip_that_you_write
+```
 
 ![Image](https://github.com/user-attachments/assets/6b728742-bbda-413f-a385-3ef3834629fa)
 

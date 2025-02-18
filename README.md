@@ -67,7 +67,7 @@ Add the user to the wheel group (this will allow it to perform required system a
 Ansible instalation and configuration:
 
 - Install epel-release repository:
-`sudo dnf install epel-release`y
+`sudo dnf install epel-release y`
 - Install ansible:
 `sudo dnf install -y ansible`
 - Make a dir for storing playbooks:

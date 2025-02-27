@@ -10,18 +10,18 @@ For this exercise, we will need:
     - Go to Network.
     - Under Attached to, select Bridged Adapter.
 
-![Image](https://github.com/user-attachments/assets/59365b7b-fb16-48c7-bcad-865a05a1b0eb)
+    ![Image](https://github.com/user-attachments/assets/59365b7b-fb16-48c7-bcad-865a05a1b0eb)
  
- - Clone the original VM in which you installed the Linux OS and name it "Ansible Host."
- - Be sure to select the option to generate new MAC addresses.
- - Repeat this process for Host01, Host02, and Host03.
+    - Clone the original VM in which you installed the Linux OS and name it "Ansible Host."
+    - Be sure to select the option to generate new MAC addresses.
+    - Repeat this process for Host01, Host02, and Host03.
 
-![Image](https://github.com/user-attachments/assets/f4c54ee4-1927-47ae-9558-334c47e512f6)
+    ![Image](https://github.com/user-attachments/assets/f4c54ee4-1927-47ae-9558-334c47e512f6)
 
-- You can group all four VMs and take snapshots. If something goes wrong, it will be easy to roll back your actions.
-- The installation process will be skipped.
-- 
-SSH connection and editing some configuration files:
+    - You can group all four VMs and take snapshots. If something goes wrong, it will be easy to roll back your actions.
+    - The installation process will be skipped.
+  
+2. SSH connection and editing some configuration files:
 - Run the VM.
 - To be able to connect to the VMs, we need to check their IP addresses. Open each VM window one by one, log in, and type `ip a`. Write down their IP addresses, and note which VM each one belongs to. 
 

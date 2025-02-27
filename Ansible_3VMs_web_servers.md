@@ -88,86 +88,86 @@ For this exercise, we will need:
         for i in 1 2 3; do ssh-copy-id hostname@host0$i; done
         ```
 
-Ansible instalation and configuration:
+4. Ansible instalation and configuration:
 
-- Install epel-release repository:
-```bash
-sudo dnf install epel-release y
-```
-- Install ansible:
-```bash
-sudo dnf install -y ansible
-```
-- Make a dir for storing playbooks:
-```bash
-mkdir Ansible_Playbooks
-```
-- Go to the created directory:
-```bash
-cd Ansible_Playbooks/
-```
-- Create nginx yaml file (playbook itself):
- ```bash
-touch Nginx_Playbook.yaml
-```
-- Create a playbook, paste the folowing text:
-```yaml
----
-- name: Install and Start Nginx on AlmaLinux 9.5
-  hosts: webservers
-  become: yes
-  tasks:
-    - name: Ensure DNF is up to date
-      dnf:
-        name: "*"
-        state: latest
-
-    - name: Install Nginx
-      dnf:
-        name: nginx
-        state: present
-
-    - name: Enable and Start Nginx
-      systemd:
-        name: nginx
-        enabled: yes
-        state: started
-
-    - name: Open HTTP and HTTPS Ports in Firewalld
-      firewalld:
-        service: "{{ item }}"
-        permanent: yes
-        state: enabled
-      with_items:
-        - http
-        - https
-
-    - name: Reload Firewalld
-      command: firewall-cmd --reload
-
-    - name: Verify Nginx is Running
-      command: systemctl is-active nginx
-      register: nginx_status
-
-    - name: Print Nginx Status
-      debug:
-        msg: "Nginx is {{ nginx_status.stdout }}"
-```
-- Open the file /etc/ansible/hosts and append the folowing:
-```
-[webservers]
-host01 ansible_host=IP_of_host01
-host02 ansible_host=IP_of_host02
-host03 ansible_host=IP_of_host03
-
-[webservers:vars]
-ansible_user=ansible
-ansible_ssh_private_key_file=~/.ssh/id_rsa
-
-```
-- To run you task type the folowing:
-```bash
-ansible-playbook path_to_your_playbook_yaml_file -K
-```
+    - Install epel-release repository:
+        ```bash
+        sudo dnf install epel-release y
+        ```
+    - Install ansible:
+        ```bash
+        sudo dnf install -y ansible
+        ```
+    - Make a dir for storing playbooks:
+        ```bash
+        mkdir Ansible_Playbooks
+        ```
+    - Go to the created directory:
+        ```bash
+        cd Ansible_Playbooks/
+        ```
+    - Create nginx yaml file (playbook itself):
+         ```bash
+        touch Nginx_Playbook.yaml
+        ```
+    - Create a playbook, paste the folowing text:
+        ```yaml
+        ---
+        - name: Install and Start Nginx on AlmaLinux 9.5
+          hosts: webservers
+          become: yes
+          tasks:
+            - name: Ensure DNF is up to date
+              dnf:
+                name: "*"
+                state: latest
+        
+            - name: Install Nginx
+              dnf:
+                name: nginx
+                state: present
+        
+            - name: Enable and Start Nginx
+              systemd:
+                name: nginx
+                enabled: yes
+                state: started
+        
+            - name: Open HTTP and HTTPS Ports in Firewalld
+              firewalld:
+                service: "{{ item }}"
+                permanent: yes
+                state: enabled
+              with_items:
+                - http
+                - https
+        
+            - name: Reload Firewalld
+              command: firewall-cmd --reload
+        
+            - name: Verify Nginx is Running
+              command: systemctl is-active nginx
+              register: nginx_status
+        
+            - name: Print Nginx Status
+              debug:
+                msg: "Nginx is {{ nginx_status.stdout }}"
+        ```
+    - Open the file /etc/ansible/hosts and append the folowing:
+        ```
+        [webservers]
+        host01 ansible_host=IP_of_host01
+        host02 ansible_host=IP_of_host02
+        host03 ansible_host=IP_of_host03
+        
+        [webservers:vars]
+        ansible_user=ansible
+        ansible_ssh_private_key_file=~/.ssh/id_rsa
+        
+        ```
+    - To run you task type the folowing:
+        ```bash
+        ansible-playbook path_to_your_playbook_yaml_file -K
+        ```
 
 Voilà! We have automated the web server installation. We can download preconfigured Ansible collections from the official Ansible website.

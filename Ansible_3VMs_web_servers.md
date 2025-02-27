@@ -21,46 +21,46 @@ For this exercise, we will need:
     - You can group all four VMs and take snapshots. If something goes wrong, it will be easy to roll back your actions.
     - The installation process will be skipped.
   
-2. SSH connection and editing some configuration files:
-- Run the VM.
-- To be able to connect to the VMs, we need to check their IP addresses. Open each VM window one by one, log in, and type `ip a`. Write down their IP addresses, and note which VM each one belongs to. 
-
-![Image](https://github.com/user-attachments/assets/87d11c4f-a82e-4aeb-b91e-ff5a6f3abc45)
-
-- Open four PowerShell windows and type the following command
-
-```bash
-ssh username@ip_that_you_write
-```
-
-![Image](https://github.com/user-attachments/assets/6b728742-bbda-413f-a385-3ef3834629fa)
-
-- To change the hostname, type:
-```bash
-sudo hostnamectl set-hostname ansible
-```
-- To apply the settings, type:
- ```bash
-exit
-```
-Then log back in.
-- To add hostnames, type:
- ```bash
-sudo vi /etc/hosts
-```
-It should look like this:
-
-![Image](https://github.com/user-attachments/assets/9b9b653b-0350-43ed-96cb-e1201d1e8e3b)
-
-You can copy this section, as it will be the same for every host. We can check if everything is working by executing:
-```bash
-ping host01
-```
-For example:
-
-![Image](https://github.com/user-attachments/assets/25f0dba6-c47f-47b4-94f8-4e11b1ac5769)
-
-- Now we need to repeat the steps for changing the hostname and adding IP addresses to the `/etc/hosts` file.
+2. SSH connection and editing some configuration:
+    - Run the VM.
+    - To be able to connect to the VMs, we need to check their IP addresses. Open each VM window one by one, log in, and type `ip a`. Write down their IP addresses, and note which VM each one belongs to. 
+    
+    ![Image](https://github.com/user-attachments/assets/87d11c4f-a82e-4aeb-b91e-ff5a6f3abc45)
+    
+    - Open four PowerShell windows and type the following command
+    
+    ```bash
+    ssh username@ip_that_you_write
+    ```
+    
+    ![Image](https://github.com/user-attachments/assets/6b728742-bbda-413f-a385-3ef3834629fa)
+    
+    - To change the hostname, type:
+    ```bash
+    sudo hostnamectl set-hostname ansible
+    ```
+    - To apply the settings, type:
+     ```bash
+    exit
+    ```
+    Then log back in.
+    - To add hostnames, type:
+     ```bash
+    sudo vi /etc/hosts
+    ```
+    It should look like this:
+    
+    ![Image](https://github.com/user-attachments/assets/9b9b653b-0350-43ed-96cb-e1201d1e8e3b)
+    
+    You can copy this section, as it will be the same for every host. We can check if everything is working by executing:
+    ```bash
+    ping host01
+    ```
+    For example:
+    
+    ![Image](https://github.com/user-attachments/assets/25f0dba6-c47f-47b4-94f8-4e11b1ac5769)
+    
+    - Now we need to repeat the steps for changing the hostname and adding IP addresses to the `/etc/hosts` file.
  
 Preparation for work with ansible:
 

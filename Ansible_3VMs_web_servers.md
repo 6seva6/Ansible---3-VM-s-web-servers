@@ -5,10 +5,10 @@ For this exercise, we will need:
 - Any version of a Linux server (for example, AlmaLinux 9.5)
 - A terminal capable of establishing an SSH connection (for example, PowerShell)
 
-VM Preparation:
-- Open the VM’s Settings.
-- Go to Network.
-- Under Attached to, select Bridged Adapter.
+1. VM Preparation:
+ - Open the VM’s Settings.
+ - Go to Network.
+ - Under Attached to, select Bridged Adapter.
 
 ![Image](https://github.com/user-attachments/assets/59365b7b-fb16-48c7-bcad-865a05a1b0eb)
  

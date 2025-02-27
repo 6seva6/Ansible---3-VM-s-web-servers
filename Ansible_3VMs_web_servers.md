@@ -29,33 +29,33 @@ For this exercise, we will need:
     
     - Open four PowerShell windows and type the following command
     
-    ```bash
-    ssh username@ip_that_you_write
-    ```
+        ```bash
+        ssh username@ip_that_you_write
+        ```
     
     ![Image](https://github.com/user-attachments/assets/6b728742-bbda-413f-a385-3ef3834629fa)
     
     - To change the hostname, type:
-    ```bash
-    sudo hostnamectl set-hostname ansible
-    ```
+        ```bash
+        sudo hostnamectl set-hostname ansible
+        ```
     - To apply the settings, type:
-     ```bash
-    exit
-    ```
+         ```bash
+        exit
+        ```
     Then log back in.
     - To add hostnames, type:
-     ```bash
-    sudo vi /etc/hosts
-    ```
+         ```bash
+        sudo vi /etc/hosts
+        ```
     It should look like this:
     
-    ![Image](https://github.com/user-attachments/assets/9b9b653b-0350-43ed-96cb-e1201d1e8e3b)
+   ![Image](https://github.com/user-attachments/assets/9b9b653b-0350-43ed-96cb-e1201d1e8e3b)
     
-    You can copy this section, as it will be the same for every host. We can check if everything is working by executing:
-    ```bash
-    ping host01
-    ```
+    - You can copy this section, as it will be the same for every host. We can check if everything is working by executing:
+        ```bash
+        ping host01
+        ```
     For example:
     
     ![Image](https://github.com/user-attachments/assets/25f0dba6-c47f-47b4-94f8-4e11b1ac5769)

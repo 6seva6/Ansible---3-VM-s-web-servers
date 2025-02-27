@@ -62,31 +62,31 @@ For this exercise, we will need:
     
     - Now we need to repeat the steps for changing the hostname and adding IP addresses to the `/etc/hosts` file.
  
-Preparation for work with ansible:
+3. Preparation for work with ansible:
 
-- We need to create a user on Host01-03. This user will allow Ansible to connect to these hosts and perform the required playbook actions.
-Cretate user:
- ```bash
-sudo adduser ansible
-```
-Set the user password: 
-```bash
-sudo passwd ansible
-```
-Add the user to the wheel group (this will allow it to perform required system actions):
- ```bash
- sudo usermod -aG wheel ansible
-``` 
-- Repeat these steps on all hosts.
-- On the ansible system, generate ssh keys so that you can have passwordless communications with each host:
-```bash
-ssh-keygen
-```
-- Press Enter to use the default settings.
-- Copy the public key to all hosts:
-```bash
-for i in 1 2 3; do ssh-copy-id hostname@host0$i; done
-```
+    - We need to create a user on Host01-03. This user will allow Ansible to connect to these hosts and perform the required playbook actions.
+    Cretate user:
+         ```bash
+        sudo adduser ansible
+        ```
+    Set the user password: 
+        ```bash
+        sudo passwd ansible
+        ```
+    Add the user to the wheel group (this will allow it to perform required system actions):
+         ```bash
+         sudo usermod -aG wheel ansible
+        ``` 
+    - Repeat these steps on all hosts.
+    - On the ansible system, generate ssh keys so that you can have passwordless communications with each host:
+        ```bash
+        ssh-keygen
+        ```
+    - Press Enter to use the default settings.
+    - Copy the public key to all hosts:
+        ```bash
+        for i in 1 2 3; do ssh-copy-id hostname@host0$i; done
+        ```
 
 Ansible instalation and configuration:
 
